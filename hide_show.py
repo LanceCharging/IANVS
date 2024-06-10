@@ -57,3 +57,7 @@ def show_all(previous_styles):
             del previous_styles[hwnd]
         except:
             pass
+
+
+def current_visible_windows():
+    return [_._hWnd for _ in getAllWindows() if _.title != "" and _._hWnd != 0]
