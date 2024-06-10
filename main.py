@@ -26,7 +26,7 @@ def main():
         ),
     )
     add_hotkey(
-        hot_keys["SHAKING_UP_LEFT"],
+        "q+w+d",
         lambda: (
             shaking_left_face_up(
                 previous_styles, current_face, left_face, right_face, mod="1"
@@ -48,9 +48,13 @@ def main():
             sep="\n",
         ),
     )
-
+    """
     while True:
         pass
+    """
+    from keyboard import wait as kwait
+
+    kwait("esc")
 
 
 if __name__ == "__main__":
